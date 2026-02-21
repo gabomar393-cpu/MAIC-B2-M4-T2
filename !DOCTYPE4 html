@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRECOS | Proyecto SAMANURAN</title>
+    <link href="https://fonts.googleapis.com" rel="stylesheet">
+    <style>
+        :root {
+            --verde-primario: #2D5A27;
+            --verde-claro: #8EB070;
+            --blanco: #ffffff;
+            --gris-oscuro: #333333;
+            --dorado-inversion: #B8860B;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Montserrat', sans-serif; line-height: 1.6; color: var(--gris-oscuro); scroll-behavior: smooth; overflow-x: hidden; }
+
+        nav {
+            position: fixed; top: 0; width: 100%; background: rgba(255,255,255,0.95);
+            padding: 1rem; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;
+        }
+        nav a { text-decoration: none; color: var(--verde-primario); font-weight: bold; font-size: 0.6rem; text-transform: uppercase; }
+
+        section {
+            min-height: 100vh;
+            padding: 100px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        /* --- EFECTO DE ANIMACIÓN --- */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .container { max-width: 1000px; width: 100%; }
+        
+        .slide-img {
+            width: 100%; max-width: 900px; height: auto; max-height:70vh;min-height:300px;
+            object-fit: contain; image-rendering:-webkit-optimize-contrast; border-radius: 15px; margin-top: 20px; background-color:white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1); border: 4px solid var(--blanco);
+        }
+
+        h1 { font-size: 5rem; margin-bottom: 10px; letter-spacing: 5px; }
+        h2 { font-size: 2.5rem; color: var(--verde-primario); margin-bottom: 10px; text-transform: uppercase; }
+        
+        #portada {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                        url('https://postimg.cc/gallery/Q53fgdM')
+ no-repeat center center/cover;
+            color: white;
+        }
+
+        #cierre { background: var(--verde-primario); color: white; }
+        #cierre h2 { color: white; }
+
+        .bg-gris { background-color: #f4f4f4; }
+        .bg-blanco { background-color: #ffffff; }
+
+        .cta {
+            background: var(--verde-claro); color: white; padding: 18px 40px;
+            border-radius: 50px; text-decoration: none; display: inline-block; 
+            font-weight: bold; margin-top: 30px; font-size: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#portada">GRECOS</a>
+        <a href="#samanuran">SAMANURAN</a>
+        <a href="#ubicacion">UBICACIÓN</a>
+        <a href="#edificio">EDIFICIO</a>
+        <a href="#urbanismo">URBANISMO</a>
+        <a href="#social">SOCIAL</a>
+        <a href="#inversion">INVERSIÓN</a>
+        <a href="#cierre">CONTACTO</a>
+    </nav>
+
+    <section id="portada">
+        <div class="container reveal active">
+            <h1>GRECOS</h1>
+            <p style="font-size: 1.8rem; font-weight: 700; color: var(--verde-claro);">Grupo Empresarial de Construcción Sostenible</p>
+            <p style="font-size: 1.1rem; color: #ddd; text-transform: uppercase; letter-spacing: 2px;">Responsabilidad Social, Ambiental, Económica</p>
+        </div>
+    </section>
+
+    <section id="samanuran" class="bg-blanco">
+        <div class="container reveal">
+            <h2>PROYECTO SAMANURAN</h2>
+            <p style="color: var(--verde-claro); font-size: 1.5rem;">Modelo de desarrollo sostenible</p>
+            <img src="https://i.postimg.cc/xTBVGpWR/ventconsost.png" class="slide-img">
+        </div>
+    </section>
+
+    <section id="ubicacion" class="bg-gris">
+        <div class="container reveal">
+            <h2>UBICACIÓN PROYECTO SAMANURAN</h2>
+            <img src="https://i.postimg.cc/NM8JzC9K/Captura_de_pantalla_2026_02_20_145756.png" class="slide-img">
+        </div>
+    </section>
+
+    <section id="edificio" class="bg-blanco">
+        <div class="container reveal">
+            <h2>EDIFICIO SOSTENIBLE</h2>
+            <img src="https://i.postimg.cc/vBT0Nbn6/edificiosost.png" class="slide-img">
+        </div>
+    </section>
+
+    <section id="urbanismo" class="bg-gris">
+        <div class="container reveal">
+            <h2>URBANISMO SOSTENIBLE</h2>
+            <p style="color: var(--verde-claro); font-size: 1.5rem;">Uso del Suelo - Uso del Agua</p>
+            <img src="https://i.postimg.cc/VNkyzytG/urbsost.png" class="slide-img">
+        </div>
+    </section>
+
+    <section id="social" class="bg-blanco">
+        <div class="container reveal">
+            <h2>BENEFICIOS SOCIALES Y COMUNITARIOS</h2>
+            <img src="https://i.postimg.cc/ZK8X3Yx9/ventsocial.png" class="slide-img">
+        </div>
+    </section>
+
+    <section id="inversion" class="bg-gris">
+        <div class="container reveal">
+            <h2>BENEFICIOS ECONÓMICOS PARA INVERSIONISTAS</h2>
+            <p style="font-size: 1.8rem; color: var(--dorado-inversion); font-weight: 700;">Alta Valorización</p>
+            <img src="https://i.postimg.cc/CLgQFTTv/ventecinv.png" class="slide-img">
+        </div>
+    </section>
+
+    <section id="cierre">
+        <div class="container reveal">
+            <h2>ÚNETE AL FUTURO DE LA SOSTENIBILIDAD</h2>
+            <p style="font-size: 1.5rem; margin-top: 20px;">Contacto: <strong>gabomar393@gmail.com</strong></p>
+            <a href="mailto:gabomar393@://gmail.com en Proyecto SAMANURAN" class="cta">AGENDAR REUNIÓN</a>
+        </div>
+    </section>
+
+    <script>
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+    </script>
+</body>
+</html>
